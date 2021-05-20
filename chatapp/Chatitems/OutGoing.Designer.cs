@@ -43,7 +43,7 @@ namespace chatapp.Chatitems
             | System.Windows.Forms.AnchorStyles.Right)));
             this.bunifuUserControl1.AnimationSpeed = 200;
             this.bunifuUserControl1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuUserControl1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(221)))), ((int)(((byte)(102)))));
+            this.bunifuUserControl1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(199)))), ((int)(((byte)(85)))));
             this.bunifuUserControl1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(221)))), ((int)(((byte)(102)))));
             this.bunifuUserControl1.BorderRadius = 33;
             this.bunifuUserControl1.BorderStyle = Bunifu.UI.WinForms.BunifuUserControl.BorderStyles.Solid;
@@ -53,10 +53,11 @@ namespace chatapp.Chatitems
             this.bunifuUserControl1.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuUserControl1.Image = null;
             this.bunifuUserControl1.ImageMargin = new System.Windows.Forms.Padding(0);
-            this.bunifuUserControl1.Location = new System.Drawing.Point(86, 1);
+            this.bunifuUserControl1.Location = new System.Drawing.Point(97, 1);
+            this.bunifuUserControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.bunifuUserControl1.Name = "bunifuUserControl1";
             this.bunifuUserControl1.ShowBorders = true;
-            this.bunifuUserControl1.Size = new System.Drawing.Size(543, 52);
+            this.bunifuUserControl1.Size = new System.Drawing.Size(611, 65);
             this.bunifuUserControl1.Style = Bunifu.UI.WinForms.BunifuUserControl.UserControlStyles.Flat;
             this.bunifuUserControl1.TabIndex = 0;
             // 
@@ -65,24 +66,25 @@ namespace chatapp.Chatitems
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(221)))), ((int)(((byte)(102)))));
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(199)))), ((int)(((byte)(85)))));
+            this.label1.Font = new System.Drawing.Font("Geometr212 BkCn BT", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(101, 16);
+            this.label1.Location = new System.Drawing.Point(114, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(513, 23);
+            this.label1.Size = new System.Drawing.Size(577, 29);
             this.label1.TabIndex = 2;
             this.label1.Text = "Hello World";
             // 
             // OutGoing
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(221)))), ((int)(((byte)(153)))));
             this.Controls.Add(this.label1);
             this.Controls.Add(this.bunifuUserControl1);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "OutGoing";
-            this.Size = new System.Drawing.Size(659, 58);
+            this.Size = new System.Drawing.Size(741, 72);
             this.DockChanged += new System.EventHandler(this.OutGoing_DockChanged);
             this.ResumeLayout(false);
 

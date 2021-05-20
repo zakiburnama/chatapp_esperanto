@@ -3,19 +3,52 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Timers;
 
 namespace chatapp
 {
     class Percakapan
     {
-        
         public string perc { get; set; }
         public int finish { get; set; }
+
+        private static System.Timers.Timer aTimer;
+
+        private static void TriggerDialogModul()
+        {
+            aTimer = new System.Timers.Timer(1000);
+            aTimer.Elapsed += TriggeredEvent1;
+            aTimer.AutoReset = false;
+            aTimer.Enabled = true;
+        }
+
+        private static void TriggeredEvent1(Object source, ElapsedEventArgs e)
+        {
+            Selamat_Modul slmtmdl = new Selamat_Modul();
+            slmtmdl.ShowDialog();
+            aTimer.Stop();
+            aTimer.Dispose();
+        }
+
+        private static void TriggerDialogLatihan()
+        {
+            aTimer = new System.Timers.Timer(1000);
+            aTimer.Elapsed += TriggeredEvent2;
+            aTimer.AutoReset = false;
+            aTimer.Enabled = true;
+        }
+
+        private static void TriggeredEvent2(Object source, ElapsedEventArgs e)
+        {
+            Selamat_Latihan slmtlthn = new Selamat_Latihan();
+            slmtlthn.ShowDialog();
+            aTimer.Stop();
+            aTimer.Dispose();
+        }
 
         // cek input modul 1
         public void cek(string teks)
         {
-            
             string a = "saluton";
             string b = "bonvenon";
             string c = "kiel vi fartas";
@@ -27,13 +60,10 @@ namespace chatapp
             string i = "mi devas foriri";
             string j = "gis revido";
 
-            
+
             if (String.Equals(teks, a))
             {
                 perc = "Saluton Artinya 'Halo' \nSelanjutnya 'Bonvenon'";
-                finish = 1;
-                //f2.siap = 1;
-                //f2.Refresh();
             }
 
             else if (String.Equals(teks, b))
@@ -80,15 +110,17 @@ namespace chatapp
             {
                 perc = "Gis Revido artinya 'Sampai bertemu lagi' \nSelamat Anda Sudah menyelesaikan Modul I";
 
+                finish = 1;
+
+                TriggerDialogModul();
             }
 
-            //
             else
             {
                 perc = "saya tidak mengerti";
             }
-
         }
+        
 
         // cek input latihan
         public void ceklat1(string teks)
@@ -109,7 +141,12 @@ namespace chatapp
             else if (String.Equals(teks, d + " " + e))
                 perc = d + "\n" + g + " " + h + " " + i;
             else if (String.Equals(teks, f))
+            {
                 perc = j;
+                finish = 2;
+
+                TriggerDialogLatihan();
+            }
 
             //
             else
@@ -120,6 +157,7 @@ namespace chatapp
 
         public void cek2(string teks)
         {
+            
             string a = "";
             string b = "";
             string c = "";
@@ -181,10 +219,6 @@ namespace chatapp
             {
                 n = 0;
             }
-
-            
         }
-
-
     }
 }

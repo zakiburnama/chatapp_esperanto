@@ -36,6 +36,7 @@ namespace chatapp
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             this.pnlHeader = new System.Windows.Forms.Panel();
+            this.btnBack = new Bunifu.UI.WinForms.BunifuImageButton();
             this.bunifuPictureBox1 = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.lblStatus = new System.Windows.Forms.Label();
             this.btnClose = new Bunifu.UI.WinForms.BunifuImageButton();
@@ -56,41 +57,83 @@ namespace chatapp
             // 
             // pnlHeader
             // 
-            this.pnlHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(238)))), ((int)(((byte)(153)))));
+            this.pnlHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(141)))), ((int)(((byte)(39)))));
+            this.pnlHeader.Controls.Add(this.btnBack);
             this.pnlHeader.Controls.Add(this.bunifuPictureBox1);
             this.pnlHeader.Controls.Add(this.lblStatus);
             this.pnlHeader.Controls.Add(this.btnClose);
             this.pnlHeader.Controls.Add(this.label1);
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
+            this.pnlHeader.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(500, 123);
+            this.pnlHeader.Size = new System.Drawing.Size(562, 154);
             this.pnlHeader.TabIndex = 0;
+            // 
+            // btnBack
+            // 
+            this.btnBack.ActiveImage = null;
+            this.btnBack.AllowAnimations = true;
+            this.btnBack.AllowBuffering = false;
+            this.btnBack.AllowToggling = false;
+            this.btnBack.AllowZooming = true;
+            this.btnBack.AllowZoomingOnFocus = false;
+            this.btnBack.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBack.BackColor = System.Drawing.Color.Transparent;
+            this.btnBack.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnBack.ErrorImage = ((System.Drawing.Image)(resources.GetObject("btnBack.ErrorImage")));
+            this.btnBack.FadeWhenInactive = false;
+            this.btnBack.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
+            this.btnBack.Image = ((System.Drawing.Image)(resources.GetObject("btnBack.Image")));
+            this.btnBack.ImageActive = null;
+            this.btnBack.ImageLocation = null;
+            this.btnBack.ImageMargin = 10;
+            this.btnBack.ImageSize = new System.Drawing.Size(37, 36);
+            this.btnBack.ImageZoomSize = new System.Drawing.Size(47, 46);
+            this.btnBack.InitialImage = ((System.Drawing.Image)(resources.GetObject("btnBack.InitialImage")));
+            this.btnBack.Location = new System.Drawing.Point(460, 4);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Rotation = 0;
+            this.btnBack.ShowActiveImage = true;
+            this.btnBack.ShowCursorChanges = true;
+            this.btnBack.ShowImageBorders = true;
+            this.btnBack.ShowSizeMarkers = false;
+            this.btnBack.Size = new System.Drawing.Size(47, 46);
+            this.btnBack.TabIndex = 5;
+            this.btnBack.ToolTipText = "";
+            this.btnBack.WaitOnLoad = false;
+            this.btnBack.Zoom = 10;
+            this.btnBack.ZoomSpeed = 10;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // bunifuPictureBox1
             // 
             this.bunifuPictureBox1.AllowFocused = false;
             this.bunifuPictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bunifuPictureBox1.AutoSizeHeight = true;
-            this.bunifuPictureBox1.BorderRadius = 37;
+            this.bunifuPictureBox1.BorderRadius = 0;
             this.bunifuPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuPictureBox1.Image")));
             this.bunifuPictureBox1.IsCircle = true;
-            this.bunifuPictureBox1.Location = new System.Drawing.Point(25, 25);
+            this.bunifuPictureBox1.Location = new System.Drawing.Point(28, 31);
+            this.bunifuPictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.bunifuPictureBox1.Name = "bunifuPictureBox1";
-            this.bunifuPictureBox1.Size = new System.Drawing.Size(75, 75);
+            this.bunifuPictureBox1.Size = new System.Drawing.Size(84, 84);
             this.bunifuPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuPictureBox1.TabIndex = 0;
             this.bunifuPictureBox1.TabStop = false;
-            this.bunifuPictureBox1.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
+            this.bunifuPictureBox1.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Square;
             // 
             // lblStatus
             // 
             this.lblStatus.AutoSize = true;
-            this.lblStatus.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStatus.Font = new System.Drawing.Font("Futura Md BT", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblStatus.ForeColor = System.Drawing.Color.White;
-            this.lblStatus.Location = new System.Drawing.Point(112, 65);
+            this.lblStatus.Location = new System.Drawing.Point(126, 83);
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(51, 19);
+            this.lblStatus.Size = new System.Drawing.Size(58, 19);
             this.lblStatus.TabIndex = 2;
             this.lblStatus.Text = "Online";
             // 
@@ -114,17 +157,18 @@ namespace chatapp
             this.btnClose.ImageActive = null;
             this.btnClose.ImageLocation = null;
             this.btnClose.ImageMargin = 10;
-            this.btnClose.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnClose.ImageZoomSize = new System.Drawing.Size(30, 30);
+            this.btnClose.ImageSize = new System.Drawing.Size(37, 36);
+            this.btnClose.ImageZoomSize = new System.Drawing.Size(47, 46);
             this.btnClose.InitialImage = ((System.Drawing.Image)(resources.GetObject("btnClose.InitialImage")));
-            this.btnClose.Location = new System.Drawing.Point(458, 12);
+            this.btnClose.Location = new System.Drawing.Point(512, 4);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnClose.Name = "btnClose";
             this.btnClose.Rotation = 0;
             this.btnClose.ShowActiveImage = true;
             this.btnClose.ShowCursorChanges = true;
             this.btnClose.ShowImageBorders = true;
             this.btnClose.ShowSizeMarkers = false;
-            this.btnClose.Size = new System.Drawing.Size(30, 30);
+            this.btnClose.Size = new System.Drawing.Size(47, 46);
             this.btnClose.TabIndex = 1;
             this.btnClose.ToolTipText = "";
             this.btnClose.WaitOnLoad = false;
@@ -136,24 +180,25 @@ namespace chatapp
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Futura Md BT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(106, 25);
+            this.label1.Location = new System.Drawing.Point(125, 41);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(203, 32);
+            this.label1.Size = new System.Drawing.Size(343, 29);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Trejnisto (trainer)";
+            this.label1.Text = "Trejnisto (Pelatih / Trainer)";
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(141)))), ((int)(((byte)(39)))));
             this.panel2.Controls.Add(this.btnSend);
             this.panel2.Controls.Add(this.txtPesan);
             this.panel2.Controls.Add(this.bunifuSeparator1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 725);
+            this.panel2.Location = new System.Drawing.Point(0, 906);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(500, 75);
+            this.panel2.Size = new System.Drawing.Size(562, 94);
             this.panel2.TabIndex = 1;
             // 
             // btnSend
@@ -176,17 +221,18 @@ namespace chatapp
             this.btnSend.ImageActive = null;
             this.btnSend.ImageLocation = null;
             this.btnSend.ImageMargin = 10;
-            this.btnSend.ImageSize = new System.Drawing.Size(31, 31);
-            this.btnSend.ImageZoomSize = new System.Drawing.Size(41, 41);
+            this.btnSend.ImageSize = new System.Drawing.Size(36, 41);
+            this.btnSend.ImageZoomSize = new System.Drawing.Size(46, 51);
             this.btnSend.InitialImage = ((System.Drawing.Image)(resources.GetObject("btnSend.InitialImage")));
-            this.btnSend.Location = new System.Drawing.Point(447, 20);
+            this.btnSend.Location = new System.Drawing.Point(503, 25);
+            this.btnSend.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSend.Name = "btnSend";
             this.btnSend.Rotation = 0;
             this.btnSend.ShowActiveImage = true;
             this.btnSend.ShowCursorChanges = true;
             this.btnSend.ShowImageBorders = true;
             this.btnSend.ShowSizeMarkers = false;
-            this.btnSend.Size = new System.Drawing.Size(41, 41);
+            this.btnSend.Size = new System.Drawing.Size(46, 51);
             this.btnSend.TabIndex = 2;
             this.btnSend.ToolTipText = "";
             this.btnSend.WaitOnLoad = false;
@@ -221,7 +267,8 @@ namespace chatapp
             this.txtPesan.IconRight = null;
             this.txtPesan.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPesan.Lines = new string[0];
-            this.txtPesan.Location = new System.Drawing.Point(12, 20);
+            this.txtPesan.Location = new System.Drawing.Point(14, 25);
+            this.txtPesan.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPesan.MaxLength = 32767;
             this.txtPesan.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtPesan.Modified = false;
@@ -247,7 +294,7 @@ namespace chatapp
             stateProperties4.ForeColor = System.Drawing.Color.Empty;
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtPesan.OnIdleState = stateProperties4;
-            this.txtPesan.Padding = new System.Windows.Forms.Padding(3);
+            this.txtPesan.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPesan.PasswordChar = '\0';
             this.txtPesan.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtPesan.PlaceholderText = "Enter text";
@@ -257,7 +304,7 @@ namespace chatapp
             this.txtPesan.SelectionLength = 0;
             this.txtPesan.SelectionStart = 0;
             this.txtPesan.ShortcutsEnabled = true;
-            this.txtPesan.Size = new System.Drawing.Size(429, 41);
+            this.txtPesan.Size = new System.Drawing.Size(483, 51);
             this.txtPesan.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtPesan.TabIndex = 1;
             this.txtPesan.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -267,11 +314,10 @@ namespace chatapp
             this.txtPesan.TextPlaceholder = "Enter text";
             this.txtPesan.UseSystemPasswordChar = false;
             this.txtPesan.WordWrap = true;
-            this.txtPesan.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtPesan_KeyUp);
             // 
             // bunifuSeparator1
             // 
-            this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(141)))), ((int)(((byte)(39)))));
             this.bunifuSeparator1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuSeparator1.BackgroundImage")));
             this.bunifuSeparator1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuSeparator1.DashCap = Bunifu.UI.WinForms.BunifuSeparator.CapStyles.Flat;
@@ -280,32 +326,32 @@ namespace chatapp
             this.bunifuSeparator1.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.DoubleEdgeFaded;
             this.bunifuSeparator1.LineThickness = 2;
             this.bunifuSeparator1.Location = new System.Drawing.Point(0, 0);
-            this.bunifuSeparator1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuSeparator1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bunifuSeparator1.Name = "bunifuSeparator1";
             this.bunifuSeparator1.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Horizontal;
-            this.bunifuSeparator1.Size = new System.Drawing.Size(500, 13);
+            this.bunifuSeparator1.Size = new System.Drawing.Size(562, 16);
             this.bunifuSeparator1.TabIndex = 0;
             // 
             // pnlContainer
             // 
             this.pnlContainer.AutoScroll = true;
-            this.pnlContainer.BackColor = System.Drawing.Color.White;
+            this.pnlContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(221)))), ((int)(((byte)(153)))));
             this.pnlContainer.Controls.Add(this.X);
             this.pnlContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlContainer.Location = new System.Drawing.Point(0, 123);
+            this.pnlContainer.Location = new System.Drawing.Point(0, 154);
+            this.pnlContainer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnlContainer.Name = "pnlContainer";
-            this.pnlContainer.Size = new System.Drawing.Size(500, 602);
+            this.pnlContainer.Size = new System.Drawing.Size(562, 752);
             this.pnlContainer.TabIndex = 2;
-            this.pnlContainer.Scroll += new System.Windows.Forms.ScrollEventHandler(this.pnlContainer_Scroll);
             // 
             // X
             // 
             this.X.Enabled = false;
-            this.X.Location = new System.Drawing.Point(35, -26);
+            this.X.Location = new System.Drawing.Point(39, -32);
             this.X.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.X.Multiline = true;
             this.X.Name = "X";
-            this.X.Size = new System.Drawing.Size(442, 26);
+            this.X.Size = new System.Drawing.Size(497, 32);
             this.X.TabIndex = 1;
             // 
             // bunifuFormDock1
@@ -350,20 +396,21 @@ namespace chatapp
             // 
             // timer1
             // 
-            this.timer1.Interval = 1000;
+            this.timer1.Interval = 500;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Form1
             // 
             this.AcceptButton = this.btnSend;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(500, 800);
+            this.ClientSize = new System.Drawing.Size(562, 1000);
             this.Controls.Add(this.pnlContainer);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pnlHeader);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Shown += new System.EventHandler(this.Form1_Shown);
@@ -392,6 +439,7 @@ namespace chatapp
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label lblStatus;
         private System.Windows.Forms.TextBox X;
+        private Bunifu.UI.WinForms.BunifuImageButton btnBack;
     }
 }
 

@@ -173,6 +173,18 @@
     <Compile Include="Percakapan.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Selamat-Latihan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Selamat-Latihan.Designer.cs">
+      <DependentUpon>Selamat-Latihan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Selamat-Modul.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Selamat-Modul.Designer.cs">
+      <DependentUpon>Selamat-Modul.cs</DependentUpon>
+    </Compile>
     <Compile Include="Utils.cs" />
     <EmbeddedResource Include="Chatitems\OutGoing.resx">
       <DependentUpon>OutGoing.cs</DependentUpon>
@@ -196,6 +208,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Selamat-Latihan.resx">
+      <DependentUpon>Selamat-Latihan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Selamat-Modul.resx">
+      <DependentUpon>Selamat-Modul.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

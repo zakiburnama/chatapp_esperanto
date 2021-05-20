@@ -23,9 +23,14 @@ namespace chatapp
 
         private void btnClose_Click(object sender, EventArgs e)
         {
+            System.Windows.Forms.Application.Exit();
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            int x = prc.finish;
             this.Hide();
-            Form2 f2 = new Form2();
-            f2.siap = 1;
+            Form2 f2 = new Form2(x);
             f2.ShowDialog();
         }
 
@@ -36,7 +41,6 @@ namespace chatapp
 
         public void Send()
         {
-
             // cek input ada diisi atau tidak
             if (txtPesan.Text.Trim().Length <= 0) return;
 
@@ -54,10 +58,8 @@ namespace chatapp
             else if (temp == 2)
                 prc.ceklat1(x);
 
-            lblStatus.Text = "Typing...";
+            lblStatus.Text = "Sedang Mengetik...";
             timer1.Start();
-           
-
         }
 
         int curTop = 10;
@@ -67,7 +69,7 @@ namespace chatapp
             var bubble = new Chatitems.Incomming();
             pnlContainer.Controls.Add(bubble);
             bubble.Top = curTop;
-            bubble.Width = pnlContainer.Width-10;
+            bubble.Width = pnlContainer.Width+10;
             //bubble.BringToFront();
             bubble.Dock = DockStyle.Bottom;
             bubble.Message = message;
@@ -86,31 +88,14 @@ namespace chatapp
             pnlContainer.AutoScrollPosition = new Point(999, 999);
         }
 
-        private void txtPesan_KeyUp(object sender, KeyEventArgs e)
-        {
-            /*
-            if (e.KeyCode = Keys.Return)
-            {
-                Send();
-            }
-            */
-        }
-
         private void timer1_Tick(object sender, EventArgs e)
         {
-            //Data std = new Data(n);
-
             timer1.Stop();
             lblStatus.Text = "Online";
-
-            //int a = std.nnn;
-
-            //int a = prc.nomo;
-            
+                        
             string p = prc.perc;
 
             AddIncomming(p);
-
         }
 
         private void Form1_Shown(object sender, EventArgs e)
@@ -121,12 +106,11 @@ namespace chatapp
                 AddIncomming("Sekarang kita masuk ke modul perkenalan");
                 AddIncomming("Ketik 'Saluton' untuk menyapa");
             }
+
+            if (temp == 2)
+            {
+                AddIncomming("Mulai dengan Halo dalam Esperanto!");
+            }
         }
-
-        private void pnlContainer_Scroll(object sender, ScrollEventArgs e)
-        {
-
-        }
-
     }
 }

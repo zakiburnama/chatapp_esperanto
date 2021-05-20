@@ -12,26 +12,24 @@ namespace chatapp
 {
     public partial class Form2 : Form
     {
-        Percakapan p = new Percakapan();
-        public int siap = 0;
-
-        public Form2()
+        public Form2(int f)
         {
-            //
             InitializeComponent();
             //
-            btnLatMod1.Enabled = false;
-            btnModul2.Enabled = false;
-            btnLatMod2.Enabled = false;
-            btnModul3.Enabled = false;
-            btnLatMod3.Enabled = false;
-            btnModul4.Enabled = false;
-            btnLatMod4.Enabled = false;
+            //btnLatMod1.Enabled = false;
+            //btnModul2.Enabled = false;
+            //btnLatMod2.Enabled = false;
+            //btnModul3.Enabled = false;
+            //btnLatMod3.Enabled = false;
+            //btnModul4.Enabled = false;
+            //btnLatMod4.Enabled = false;
             //
-            int a = p.finish;
-            //a = siap;
+            int a = f;
+
             if (a == 1)
+            {
                 btnLatMod1.Enabled = true;
+            }
             else if (a == 2)
             {
                 btnLatMod1.Enabled = true;
@@ -85,7 +83,6 @@ namespace chatapp
             Form1 formm = new Form1();
             formm.temp = 1;
             formm.ShowDialog();
-
         }
 
         private void btnClose_Click(object sender, EventArgs e)
